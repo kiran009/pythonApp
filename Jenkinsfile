@@ -5,7 +5,7 @@ node(){
 }	
 	stage("Dockerbuild")
 	{
-	output=sh(script:"sudo docker build -t pythoncore .",returnStdout=true)
+	output=sh(script:"sudo docker build -t pythoncore .",returnstatus:true)
 	echo $output
 }
 
